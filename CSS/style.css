@@ -111,6 +111,7 @@ Usamos display:nome para não exibir inicialmente a lista de links */
 
 address img {
     width: 20px;
+    color: var(--cor-titulo);
 }
 
 /* Seletor de classes combinadas.
