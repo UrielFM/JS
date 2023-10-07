@@ -1,0 +1,454 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Raleway:wght@700;800&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    /* Variáveis para palta de cores do site.*/
+    --cor-titulo: #1D438A;
+    --cor-menu: #BCDBE0;
+    --cor-texto: #333;
+    --cor-escura: #000;
+    --cor-clara: #fff;
+    --cor-intermediaria: #31b7ff;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    color: var(--cor-texto);
+    font-family: 'Noto Sans', sans-serif;
+    background-color: var(--cor-clara);
+}
+
+/* CSS Reset em alguns elementos */
+body,
+h1,
+h2,
+p,
+figure,
+.menu {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 90%;
+}
+
+h1 {
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 1.5rem;
+}
+
+h1 img {
+    max-width: 30%;
+}
+
+h1 a {
+    color: var(--cor-clara);
+    padding: 0.3rem 1rem;
+    border-radius: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: var(--cor-clara);
+}
+
+/* Menu fixo no topo */
+header .limit {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 15vh;
+}
+
+/* Formatação da palavra Menu */
+nav h2 a {
+    color: var(--cor-escura);
+    font-size: 1.2rem;
+    padding: 1rem;
+    display: inline-block;
+}
+
+.menu a:hover,
+.menu a:focus,
+nav h2 a:hover,
+nav h2 a:focus {
+    background-color: var(--cor-menu);
+}
+
+/* Regra da lista ul de links */
+.menu {
+    list-style: none;
+    /* ATENÇÃO!
+Usamos display:nome para não exibir inicialmente a lista de links */
+    display: none;
+}
+
+
+/* Regra para formatar os links contidos na lista/menu */
+.menu a {
+    color: var(--cor-titulo);
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+}
+
+address img {
+    width: 20px;
+}
+
+/* Seletor de classes combinadas.
+Esta regra somente irá funcionar quando AS DUAS CLASSES estiverem aplicadas JUNTAS no elememto HTML (no caso, na lista de menu/links).
+
+Obs.: esta combinação será possível por meio da manipulação programada com JavaScript.*/
+.menu.aberto {
+    /* Aplicar um fundo á lista evitando a dificuldade de leitura dos links. */
+    background-color: var(--cor-clara);
+
+    /* O Flex fará a lista de links aparecer */
+    display: flex;
+
+    /* Com os links em forma de coluna (vertical) */
+    flex-direction: column;
+
+    /* Usamos as propriedades de posicionamento e coordenadas para garantir o encaixe correwto (abaixo do titulo e da palavra Menu}. */
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.destaque {
+    height: 90vh;
+    background-image: url(../img/9147451.jpg);
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.destaque h2,
+.destaque p {
+    color: var(--cor-clara);
+    text-align: center;
+    animation-duration: 3s;
+    animation-name: animaDestaque;
+    animation-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
+}
+
+.destaque h2 {
+    /* Função clamp (tamanho minimo, ideal, tamanho máximo) */
+    font-size: clamp(3rem, 10vw, 7rem);
+}
+
+.destaque p {
+    font-size: clamp(1rem, 3vw, 3rem);
+}
+
+/* Regras de Animação */
+@keyframes animaDestaque {
+    from {
+        opacity: 0;
+        transform: translateY(-500px);
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+article h2 {
+    padding: 1rem;
+    font-size: 1.5rem;
+    font-family: 'Raleway', sans-serif;
+    color: var(--cor-titulo);
+}
+
+.front-end,
+.historia,
+.localizacao {
+    text-align: center;
+
+}
+
+article p {
+    padding: 0.5rem 0;
+    font-size: 1rem;
+}
+
+abbr {
+    text-decoration: none;
+    background-color: var(--cor-escura);
+    color: var(--cor-clara);
+    padding: 0 2px;
+    border-radius: 5px;
+}
+
+.historia {
+    background-image: url(../img/monitor-1307227_1920.jpg);
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.historia h2 {
+    color: var(--cor-clara);
+    text-shadow: 0.1em 0.1em 0.2em var(--cor-intermediaria);
+}
+
+.historia iframe {
+    width: 100%;
+    max-width: 700px;
+    margin-bottom: 2rem;
+
+}
+
+.localizacao iframe {
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.limit {
+    
+    margin: auto;
+    width: 95vw;
+}
+.tx {
+    text-align: center
+    ;
+}
+.front-end{
+    background-color: var(--cor-menu);
+}
+
+footer {
+    background-color: var(--cor-titulo);
+    color: var(--cor-clara);
+    height: 15vh;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+/* Regras parar Pagina Produtos, serviços e contato */
+
+.conteudo {
+    background-color: var(--cor-menu);
+    padding: 0.5rem;
+    border-radius: 8px;
+}
+
+.conteudo h2 {
+    padding-left: 0;
+    font-size: 1.8rem;
+    border-bottom: solid 1px;
+    margin-bottom: 1rem;
+}
+
+table {
+    width: 80%;
+    margin: auto;
+}
+
+table, th, td {
+    border: solid 1px;
+    border-collapse: collapse;  /* Remove os espaços entre as bordas */
+   
+}
+
+caption{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding-bottom: 0.5rem;
+}
+
+th {
+    background-color: var(--cor-escura);
+    color: var(--cor-clara);
+    border-color: var(--cor-titulo);
+    padding: 0.7rem;
+}
+td {
+    padding: 0.4rem;
+}
+
+td:nth-child(2) { text-align: center;}
+
+th:last-child, td:last-child{ text-align: right;}
+
+th:first-child{text-align: left;}
+
+tr:nth-child(even) { background-color: var(--cor-clara);}
+
+/* Colocar o R$ com CSS com um Pseudo-elemento ::before(depois) ou ::after(antes)*/
+td:last-child {position: relative;}
+td:last-child::before { 
+    content: "R$ ";
+    position: absolute;
+    left: 10px;
+}
+
+
+.imgBx{text-align: center;}
+
+.imgBx img{
+    margin: 0;
+    border-radius: 100px;
+    align-items: center;
+    transition: 1s;
+    transform: scale(0.8);
+    
+}
+
+/* Aplicamos o :hover e o :focus ao seletor tag "a" em vez de aplicar no "img". Desta forma, o acionamento funcionará tanto com mouse quanto com teclado */
+.imgBx a:hover img, .imgBx a:focus img {
+    transform: scale(1);
+    border-radius: 0; 
+    filter: blur(0);
+}
+
+form{
+    max-width: 500px;
+    margin: auto;
+}
+
+input, select, textarea {
+    border: none;
+    padding: 5px;
+    height: 30px;
+    border-radius: 4px;
+}
+
+textarea {height: auto;}
+
+form div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+label {
+    font-size: 0.9rem;
+    font-weight: bold;
+    width: 30%;
+}
+
+button {
+    background-color: var(--cor-escura);
+    color: var(--cor-clara);
+    border: none;
+    font-weight: bold;
+    padding: 1rem 0.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover, button:focus {
+    background-color: var(--cor-clara);
+    color: var(--cor-escura);
+    box-shadow: var(--cor-escura) 0 0 4px;
+}
+
+
+/* Pseudo-classe :not() 
+Permite criar exceções para uma regra.
+Neste exemplo, estamos aplicando 70% de largura 
+para tudo(*) dentro do "form div" Execto o "label".*/
+form div *:not(label) { width: 70%}
+
+/* Botão flutuante do Watsapp */
+.icon {
+    position: fixed;
+    bottom: 70px;
+    right: 30px;
+    font-size: 30px;
+    background-color: #01e675;
+    color: #ffffff;
+    border-radius: 50%;
+    padding: 3px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    text-decoration: none;
+    z-index: 100;
+    box-shadow: 2px 2px 2px #c0bdbdb6;
+  }
+  
+  .icon .fab{
+    padding-top: 9px;
+  }
+  
+  .icon:hover{
+    background-color: #fff;
+    color: #029e3b;
+    font-weight: 900;
+    box-shadow: 2px 2px 20px #2b2a2aad;
+  }
+
+/* Medias Query Gerais */
+@media screen and (min-width: 570px) {
+
+    header .menuBx {
+        display: none;
+        
+    }
+
+    h1 img {
+        max-width: 150px;
+    }
+
+    .menu {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+
+    nav {
+        width: 70%;
+    }
+
+    .front-end img {
+        height: 200px;
+    }
+
+}
+
+@media screen and (min-width: 900px) {
+
+    * {
+        font-size: 18px;
+    }
+
+   h1 img{
+        max-height: 200px;
+    }
+
+    .limit {
+        max-width: 1000px;
+    }
+}
+
