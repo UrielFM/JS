@@ -114,6 +114,7 @@ address img {
     color: var(--cor-titulo);
 }
 
+
 /* Seletor de classes combinadas.
 Esta regra somente irá funcionar quando AS DUAS CLASSES estiverem aplicadas JUNTAS no elememto HTML (no caso, na lista de menu/links).
 
@@ -311,6 +312,19 @@ td:last-child::before {
     left: 10px;
 }
 
+.imglogo{
+    max-width: 200px;
+    margin: 0;
+    align-items: center;
+    transition: 1s;
+    transform: scale(0.8);
+}
+
+.imglogo:hover, .imglogo:focus{
+    transform: scale(1);
+    border-radius: 0; 
+    filter: blur(0);
+}
 
 .imgBx{text-align: center;}
 
