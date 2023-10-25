@@ -386,7 +386,17 @@ button:hover, button:focus {
     color: var(--cor-escura);
     box-shadow: var(--cor-escura) 0 0 4px;
 }
+#cep {width: 60%;}
 
+#buscar {
+    width: 38%;
+    padding: 9px;
+    
+}
+
+#status {font-size: 12px;}
+
+.exemplo {display: none;}
 
 /* Pseudo-classe :not() 
 Permite criar exceções para uma regra.
