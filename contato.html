@@ -49,7 +49,8 @@
                     <!-- Email -->
                     <label for="email">E-mail:</label>
                     <br>
-                    <input type="email" name="email" id="email" required placeholder="exemplo@puja.com">
+                    <input type="email" name="email" id="email" 
+                     placeholder="exemplo@simplicity.com">
                 </div>
 
                 <div>
@@ -59,21 +60,64 @@
                     <input type="date" name="data" id="data">
                 </div>
 
+                <!-- INÍCIO HTML PARA CEP/ENDEREÇO -->
+
+                <!-- Cep -->
+                <div>
+                    <label for="cep">CEP: <br><span id="status"></span></label>
+                    <div id="area-do-cep">
+                        <input placeholder="Somente números" type="text" id="cep" name="cep" maxlength="9" inputmode="numeric" required> <br>
+                        <button id="buscar">Buscar</button>
+                    </div>
+                </div>
+                <!-- Endereço -->
+                <div class="exemplo">
+                    <label for="endereco">Endereço:</label>
+                    <input readonly type="text" id="endereco" name="endereco" size="30">
+                </div>
+                <!-- Número -->
+                <div class="exemplo">
+                    <label for="numero">Número:</label>
+                    <input type="text" id="numero" name="numero">
+                </div>
+                <!-- Complemento -->
+                <div class="exemplo">
+                    <label for="complemento">Complemento:</label>
+                    <input type="text" id="complemento" name="complemento">
+                </div>
+                <!-- Bairro -->
+                <div class="exemplo">
+                    <label for="bairro">Bairro:</label>
+                    <input readonly type="text" id="bairro" name="bairro">
+                </div>
+                <!-- Cidade -->
+                <div class="exemplo">
+                    <label for="cidade">Cidade:</label>
+                    <input readonly type="text" id="cidade" name="cidade">
+                </div>
+                <!-- Estado -->
+                <div class="exemplo">
+                    <label for="estado">Estado:</label>
+                    <input readonly type="text" id="estado" name="estado">
+                </div>
+                <!-- /FIM HTML PARA CEP/ENDEREÇO --> 
+
+
                 <div>
                     <!-- Telefone -->
                     <label for="telefone">Telefone:</label>
                     <br>
-                    <input type="tel" name="telefone" id="telefone" required placeholder="xx xxxxx-xxxx ">
+                    <input type="tel" name="telefone" id="telefone" placeholder="(00) 0000-0000 ">
                 </div>
 
                 <div>
                     <!-- Assunto -->
                     <label for="assunto">Assunto:</label>
                     <br>
-                    <select name="assunto" id="assunto" required>
+                    <select name="assunto" id="assunto" >
                       <option value=""></option>
-                      <option>Orçamento</option>
                       <option>Dúvidas</option>
+                      <option>Elogios</option>
                       <option>Reclamações</option>
                       <option>Outro</option>
                     </select>
@@ -83,7 +127,7 @@
                     <!-- Mensagem -->
                     <label for="mensagem">Mensagem:</label>
                     <br>
-                    <textarea name="mensagem" id="mensagem" cols="30" rows="10" required></textarea>
+                    <textarea name="mensagem" id="mensagem" cols="30" rows="10" ></textarea>
                 </div>
 
                 <div>
@@ -92,6 +136,7 @@
                 </div>
 
             </form>
+
 
             
         </article>
@@ -113,6 +158,14 @@
     <footer>
         <p>PUJA é um site fictício desenvolvido para fins educacionais &copy; <b>Senac Penha</b> - <time>2023</time> </p>
     </footer>
+<!-- Importação da biblioteca jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<!-- Importação do plugin/extensão jQuery Mask -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+
+    <script src="js/menu.js"></script>
+    <script src="js/contato.js"></script>
     
 </body>
 </html>
